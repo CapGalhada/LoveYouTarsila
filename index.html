@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart</title>
+    <link rel="canonical" href="https://icons.getbootstrap.com/icons/heart-fill/">
+    <style>
+        .content {
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #heart { 
+            position: relative; 
+            width: 100px; 
+            height: 90px; 
+            transform: scale(3);
+            transition: all 0.3s;
+            z-index: 10;
+        } 
+
+        #heart:before, #heart:after { 
+            position: absolute; 
+            content: ""; 
+            left: 50px; 
+            top: 0; 
+            width: 50px; 
+            height: 80px; 
+            background: red; 
+            border-radius: 50px 50px 0 0; 
+            transform: rotate(-45deg); 
+            transform-origin: 0 100%; 
+        } 
+
+        #heart:after { 
+            left: 0; 
+            transform: rotate(45deg); 
+            transform-origin :100% 100%; 
+        }
+
+        #heart2 { 
+            position: relative; 
+            width: 100px; 
+            height: 90px; 
+            transform: scale(3);
+            transition: all 0.3s;
+            z-index: 10;
+        } 
+
+        #heart2:before, #heart2:after { 
+            position: absolute; 
+            content: ""; 
+            left: 50px; 
+            top: 0; 
+            width: 50px; 
+            height: 80px; 
+            background: rgb(255, 168, 194); 
+            border-radius: 50px 50px 0 0; 
+            transform: rotate(-45deg); 
+            transform-origin: 0 100%; 
+        } 
+
+        #heart2:after { 
+            left: 0; 
+            transform: rotate(45deg); 
+            transform-origin :100% 100%; 
+        }
+
+        #container {
+            position: relative;
+            z-index: 10;
+            transition: all 0.3s;
+        }
+
+        #container2 {
+            position: absolute;
+            z-index: 0;
+        }
+
+        .containerMoved {
+            transform: rotate(-90deg) translate(200px, 200px);
+        }
+
+        p {
+            text-align: center;
+            font-weight: 700;
+            position: absolute;
+            color: rgb(3, 145, 62);
+            transform: translateY(-30px);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(35, 35, 209);
+        }
+
+        .cantada {
+            width: 99%;
+            color: rgb(10, 168, 10);
+            padding: 0;
+            margin: 0;
+        }
+
+        span {
+            color: rgb(16, 140, 172);
+        }
+    </style>
+</head>
+<body>
+    <h1>Clique no coração</h1>
+    <div class="content">
+        <div id="container">
+            <div id="heart"></div>
+        </div>
+        <div id="container2">
+            <div id="heart2"></div>
+        </div>
+        <p>Eu te amo
+            <br>septilhões de septilhões
+            <br>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+            </svg>
+        </p>
+    </div>
+
+    <p class="cantada">
+        Cenourinha, você é indescritível!
+        <br>
+        <span>Não há palavras suficientes para lhe descrever corretamente...</span>
+        <br>
+        Muito mais que incrível, a cada dia redefinindo a palavra perfeição!
+        <br>
+        <span>Com toda a sua maravilhosa beleza, sua personalidade encantadora,</span>
+        <br>
+        Um sorriso reluzente, que sempre aquece e derrete meu coração,
+        <br>
+        <span>Eu te amo to the moon and back, and forever</span>
+    </p>
+
+    <script>
+        const container = document.getElementById('container');
+
+        container.addEventListener('click', () => {
+            container.classList.toggle('containerMoved');
+        })
+    </script>
+</body>
+</html>
